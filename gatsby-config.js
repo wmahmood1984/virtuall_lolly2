@@ -6,7 +6,8 @@
 const url =
     process.env.NODE_ENV === "development"
       ? "http://localhost:8888"
-      : "https://quizzical-williams-4f9b3c.netlify.app/";
+      //: "http://localhost:8888"
+      : "https://quizzical-williams-4f9b3c.netlify.app";
 
 
 module.exports = {
