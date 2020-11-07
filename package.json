@@ -20,7 +20,11 @@
     "netlify-cli": "^2.67.0",
     "next-absolute-url": "^1.2.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "apollo-server-lambda": "^2.18.2",
+    "faunadb": "^3.0.1",
+    "graphql": "^14.1.1",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "prettier": "2.1.2"
