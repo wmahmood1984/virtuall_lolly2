@@ -39,18 +39,14 @@ const resolvers = {
         console.log('result',result.data)
         return result.data.map(d => {
           
-          return {
-            statuscode: 200,
-            body: JSON.stringify({ 
+          return ({
             recepientName: d.data.recepientName,
             message: d.data.message,
             senderName: d.data.senderName,
             flavourTop: d.data.flavourTop,
             flavourMiddle: d.data.flavourMiddle,
             flavourBottom: d.data.flavourBottom,
-            lollyPath: d.data.lollyPath
-             }),
-             }
+            lollyPath: d.data.lollyPath })
         })
       } catch (error) {
        console.log('err',error) 
