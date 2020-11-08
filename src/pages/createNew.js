@@ -49,6 +49,17 @@ const [createLolly] = useMutation(createLollyMutation)
             }
         })
         console.log('result from server', result)
+
+        try {
+            const netlifyPostResponse = await fetch("https://api.netlify.com/build_hooks/5fa77589e9ded37e53574538",
+            {method: "post"});
+            const netlifyPostData = await netlifyPostResponse.json();
+            console.log("DAta = ",netlifyPostData);
+        } catch (netError) {
+            console.log(netError)
+    }
+    
+    
     }
 
     return (
