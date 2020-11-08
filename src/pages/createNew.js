@@ -28,6 +28,7 @@ const Createnew = () => {
     const [color1,setColor1] = useState("#d54358");
     const [color2,setColor2] = useState("#d56356");
     const [color3,setColor3] = useState("#d58352");
+    export const [newPath,setnewPath] = useState("")
     const recepientName= useRef()
     const messageRef= useRef()
     const senderRef= useRef()
@@ -49,7 +50,8 @@ const [createLolly] = useMutation(createLollyMutation)
                 flavourBottom: color3
             }
         })
-        console.log('result from server', result)
+        console.log('newPath', result.data.createLolly.lollyPath)
+        setnewPath(result.data.createLolly.lollyPath)
 
         try {
             const netlifyPostResponse = await fetch("https://api.netlify.com/build_hooks/5fa77589e9ded37e53574538",
