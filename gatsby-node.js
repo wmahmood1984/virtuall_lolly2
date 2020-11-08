@@ -51,7 +51,14 @@ exports.createPages = async ({ actions, graphql }) => {
   {
     swapi {
       lolly {
-        lollyPath
+   recepientName
+   message
+   senderName
+   flavourTop
+   flavourMiddle
+   flavourBottom
+   lollyPath
+
       }
     }
   }
@@ -65,6 +72,12 @@ exports.createPages = async ({ actions, graphql }) => {
       component: require.resolve(`./src/templates/dynamic-page.js`),
       context: {
         path: d.lollyPath,
+        sender: d.senderName,
+        recepient: d.recepientName,
+        message: d.message,
+        topColor: d.flavourTop,
+        medColor: d.flavourMiddle,
+        bottomColor: d.flavourBottom,
       },
     })
   })
