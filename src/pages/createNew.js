@@ -2,6 +2,7 @@ import { gql, useQuery, useMutation } from '@apollo/client';
 import React, { useState,useRef } from 'react'
 import { Header } from '../component/Header'
 import Lolly from '../component/Lolly';
+import { navigate } from "gatsby"
 
 const GETDATA = gql`{
     lolly{
@@ -57,6 +58,8 @@ const [createLolly] = useMutation(createLollyMutation)
             console.log("DAta = ",netlifyPostData);
         } catch (netError) {
             console.log(netError)
+
+        navigate('/waitingarea');
     }
     
     
